@@ -89,15 +89,15 @@ public class QsPanelView extends LinearLayout {
     private void buildContent(Context context) {
         addView(normalHeader(context), matchWrap());
         addView(editHeader(context), matchWrap());
-        addView(text("txt_edit_hint", Res.string("arrow_touch_hold_reorder"), 14, true), matchWrap());
-        addView(label("label_controls", Res.string("arrow_controls"), 0, 8));
-        addView(box("controls_box", "controls_host", 0));
-        addView(label("label_tiles", Res.string("arrow_edit_tiles"), 16, 8));
-        addView(box("tiles_box", "tiles_host", 14));
+        addView(text("arrow_txt_edit_hint", Res.string("arrow_touch_hold_reorder"), 14, true), matchWrap());
+        addView(label("arrow_label_controls", Res.string("arrow_controls"), 0, 8));
+        addView(box("arrow_controls_box", "arrow_controls_host", 0));
+        addView(label("arrow_label_tiles", Res.string("arrow_edit_tiles"), 16, 8));
+        addView(box("arrow_tiles_box", "arrow_tiles_host", 14));
     }
 
     private LinearLayout normalHeader(Context context) {
-        LinearLayout header = row("header_normal");
+        LinearLayout header = row("arrow_header_normal");
         header.setPadding(0, 0, 0, dp(14));
 
         TextView date = new TextView(context);
@@ -107,25 +107,25 @@ public class QsPanelView extends LinearLayout {
         date.setTypeface(GOOGLE_SANS_MEDIUM);
         header.addView(date, new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1f));
 
-        header.addView(headerButton("btn_edit", Res.drawable("arrow_ic_edit"), Res.string("arrow_edit"), true));
-        header.addView(headerButton("btn_settings", Res.drawable("arrow_ic_settings"), Res.string("arrow_settings"), true));
-        header.addView(headerButton("btn_more", Res.drawable("arrow_ic_more"), Res.string("arrow_more"), false));
+        header.addView(headerButton("arrow_btn_edit", Res.drawable("arrow_ic_edit"), Res.string("arrow_edit"), true));
+        header.addView(headerButton("arrow_btn_settings", Res.drawable("arrow_ic_settings"), Res.string("arrow_settings"), true));
+        header.addView(headerButton("arrow_btn_more", Res.drawable("arrow_ic_more"), Res.string("arrow_more"), false));
         return header;
     }
 
     private LinearLayout editHeader(Context context) {
-        LinearLayout header = row("header_edit");
+        LinearLayout header = row("arrow_header_edit");
         header.setPadding(0, 0, 0, dp(8));
         header.setVisibility(GONE);
 
-        TextView settings = pillButton("btn_panel_settings", Res.string("arrow_panel_settings"),
+        TextView settings = pillButton("arrow_btn_panel_settings", Res.string("arrow_panel_settings"),
                 Res.drawable("arrow_bg_btn_secondary_pill"), color(Res.color("arrow_cc_text_primary")), 16);
         header.addView(settings, new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, dp(40)));
 
         View spacer = new View(context);
         header.addView(spacer, new LinearLayout.LayoutParams(0, 1, 1f));
 
-        TextView done = pillButton("btn_done", Res.string("arrow_done"), Res.drawable("arrow_bg_btn_done"),
+        TextView done = pillButton("arrow_btn_done", Res.string("arrow_done"), Res.drawable("arrow_bg_btn_done"),
                 color(Res.color("arrow_cc_text_on_accent")), 22);
         header.addView(done, new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, dp(40)));
         return header;
