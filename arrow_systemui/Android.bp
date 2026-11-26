@@ -15,11 +15,12 @@
 //
 
 package {
-    default_applicable_licenses: ["arrow_sdk_license"],
+    default_visibility: ["//visibility:public"],
+    default_applicable_licenses: ["arrow_systemui_license"],
 }
 
 license {
-    name: "arrow_sdk_license",
+    name: "arrow_systemui_license",
     visibility: [":__subpackages__"],
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
@@ -31,7 +32,7 @@ license {
 
 // Arrow CC sources.
 filegroup {
-    name: "arrow_sdk_sources",
+    name: "arrow_systemui_sources",
     srcs: [
         "src/**/*.java",
     ],
@@ -40,7 +41,7 @@ filegroup {
 
 // Arrow CC resources.
 android_library {
-    name: "arrow_sdk_res",
+    name: "arrow_systemui_res",
     manifest: "AndroidManifest.xml",
     resource_dirs: ["res"],
     visibility: ["//visibility:public"],
