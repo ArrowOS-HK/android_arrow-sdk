@@ -132,10 +132,10 @@ public final class MediaViewRenderer {
             ImageView output, TextView outputLabel, ImageView previous, ImageView play,
             ImageView next, ImageView shuffle, View seekTrack, View seekFill, TextView timeStart,
             TextView timeEnd, boolean artworkMode, boolean compact, boolean full) {
-        int iconColor = context.getColor(Res.color(artworkMode ? "cc_media_text" : "cc_icon"));
-        int titleColor = context.getColor(Res.color(artworkMode ? "cc_media_text" : "cc_text_primary"));
+        int iconColor = context.getColor(Res.color(artworkMode ? "arrow_cc_media_text" : "arrow_cc_icon"));
+        int titleColor = context.getColor(Res.color(artworkMode ? "arrow_cc_media_text" : "arrow_cc_text_primary"));
         int subtitleColor = context.getColor(
-                Res.color(artworkMode ? "cc_media_text_secondary" : "cc_text_secondary"));
+                Res.color(artworkMode ? "arrow_cc_media_text_secondary" : "arrow_cc_text_secondary"));
         ColorStateList tint = ColorStateList.valueOf(iconColor);
 
 
@@ -146,11 +146,11 @@ public final class MediaViewRenderer {
         if (body != null) {
             if (compact) {
                 body.setBackgroundResource(Res.drawable(
-                        artworkMode ? "bg_cc_media_pill" : "bg_cc_media_empty_pill"));
+                        artworkMode ? "arrow_bg_cc_media_pill" : "arrow_bg_cc_media_empty_pill"));
                 body.setForeground(context.getDrawable(Res.drawable("arrow_bg_cc_media_border_pill")));
             } else {
                 body.setBackgroundResource(Res.drawable(
-                        artworkMode ? "bg_cc_media" : "bg_cc_media_empty"));
+                        artworkMode ? "arrow_bg_cc_media" : "arrow_bg_cc_media_empty"));
                 body.setForeground(context.getDrawable(Res.drawable("arrow_bg_cc_media_border")));
             }
         }
@@ -160,7 +160,7 @@ public final class MediaViewRenderer {
                 artHolder.setBackground(null);
             } else {
                 artHolder.setBackgroundResource(
-                        Res.drawable(artworkMode ? "bg_cc_media_art" : "bg_cc_media_art_empty"));
+                        Res.drawable(artworkMode ? "arrow_bg_cc_media_art" : "arrow_bg_cc_media_art_empty"));
             }
         }
         if (scrim != null) scrim.setVisibility(artworkMode ? View.VISIBLE : View.GONE);
@@ -168,14 +168,14 @@ public final class MediaViewRenderer {
         if (subtitle != null) subtitle.setTextColor(subtitleColor);
         if (placeholder != null) placeholder.setImageTintList(tint);
         if (outputButton != null) outputButton.setBackgroundResource(Res.drawable(
-                artworkMode ? "bg_cc_media_output_button_light" : "bg_cc_media_output_button_empty"));
+                artworkMode ? "arrow_bg_cc_media_output_button_light" : "arrow_bg_cc_media_output_button_empty"));
         if (output != null) output.setImageTintList(outputTint);
         if (outputLabel != null) outputLabel.setTextColor(outputTextColor);
         if (previous != null) previous.setImageTintList(tint);
         if (play != null) {
             play.setImageTintList(ColorStateList.valueOf(chipIconColor));
             play.setBackgroundResource(Res.drawable(
-                    artworkMode ? "bg_cc_media_output_button_light" : "bg_cc_media_output_button_empty"));
+                    artworkMode ? "arrow_bg_cc_media_output_button_light" : "arrow_bg_cc_media_output_button_empty"));
         }
         if (next != null) next.setImageTintList(tint);
         if (shuffle != null) shuffle.setImageTintList(tint);
