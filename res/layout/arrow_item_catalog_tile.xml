@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:id="@+id/arrow_tile_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/arrow_bg_cc_tile_off"
+            android:minHeight="48dp">
+
+            <ImageView
+                android:id="@+id/arrow_icon"
+                android:layout_width="@dimen/arrow_cc_tile_icon"
+                android:layout_height="@dimen/arrow_cc_tile_icon"
+                android:layout_gravity="center"
+                android:tint="@color/arrow_cc_icon" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/arrow_btn_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|end"
+            android:background="@drawable/arrow_bg_cc_badge"
+            android:contentDescription="@string/arrow_add"
+            android:padding="3dp"
+            android:src="@drawable/arrow_ic_add"
+            android:tint="@color/arrow_cc_badge_on_badge" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/arrow_tile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:minHeight="36dp"
+        android:textColor="@color/arrow_cc_text_secondary"
+        android:textSize="14sp"
+        android:fontFamily="google-sans" />
+</LinearLayout>

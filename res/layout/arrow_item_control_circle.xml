@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/arrow_circle_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/arrow_bg_cc_tile_off"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/arrow_circle_icon"
+            android:layout_width="@dimen/arrow_cc_tile_icon"
+            android:layout_height="@dimen/arrow_cc_tile_icon"
+            android:layout_gravity="center"
+            android:tint="@color/arrow_cc_icon" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/arrow_badge"
+        android:layout_width="@dimen/arrow_cc_badge"
+        android:layout_height="@dimen/arrow_cc_badge"
+        android:layout_gravity="top|start"
+        android:background="@drawable/arrow_bg_cc_badge"
+        android:contentDescription="@string/arrow_remove"
+        android:padding="4dp"
+        android:src="@drawable/arrow_ic_remove"
+        android:tint="@color/arrow_cc_badge_on_badge"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <FrameLayout
+        android:id="@+id/arrow_media_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/arrow_bg_cc_media_empty"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/arrow_media_blur_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/arrow_media_scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/arrow_bg_cc_media_scrim"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/arrow_media_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="9dp">
+
+            <FrameLayout
+                android:id="@+id/arrow_media_art_holder"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="start|top"
+                android:background="@drawable/arrow_bg_cc_media_art_empty"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:id="@+id/arrow_media_art"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/arrow_media_player"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/arrow_media_placeholder_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/arrow_media_player"
+                    android:src="@drawable/arrow_ic_music"
+                    android:tint="@color/arrow_cc_icon" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/arrow_media_output_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="end|top"
+                android:background="@drawable/arrow_bg_cc_media_output_button_empty"
+                android:clickable="true"
+                android:contentDescription="@string/arrow_media_output"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp">
+
+                <ImageView
+                    android:id="@+id/arrow_media_output"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/arrow_media_output"
+                    android:src="@drawable/arrow_ic_speaker"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <TextView
+                    android:id="@+id/arrow_media_output_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:ellipsize="end"
+                    android:fontFamily="google-sans-medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/arrow_media_output_speaker"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arrow_media_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:orientation="vertical">
+
+                <com.arrow.systemui.cc.widget.MarqueeTextView
+                    android:id="@+id/arrow_media_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="google-sans-medium"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/arrow_media_now_playing"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="14sp" />
+
+                <com.arrow.systemui.cc.widget.MarqueeTextView
+                    android:id="@+id/arrow_media_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="marquee"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/arrow_media_artist_placeholder"
+                    android:textColor="@color/arrow_cc_text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/arrow_media_time_row"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_gravity="bottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/arrow_media_time_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:ellipsize="end"
+                    android:fontFamily="google-sans-medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="0:00"
+                    android:textColor="@color/arrow_cc_text_secondary"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/arrow_media_time_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:ellipsize="end"
+                    android:fontFamily="google-sans-medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="0:00"
+                    android:textColor="@color/arrow_cc_text_secondary"
+                    android:textSize="11sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/arrow_media_seek_container"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="bottom"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/arrow_media_seek_track"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/arrow_bg_cc_media_seek_track" />
+
+                <View
+                    android:id="@+id/arrow_media_seek_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@drawable/arrow_bg_cc_media_seek_fill" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/arrow_media_controls"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="bottom"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/arrow_media_prev"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_bg_cc_media_side_button"
+                    android:contentDescription="@string/arrow_media_prev"
+                    android:padding="6dp"
+                    android:src="@drawable/arrow_ic_skip_previous"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <ImageView
+                    android:id="@+id/arrow_media_play"
+                    android:layout_width="44dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_bg_cc_media_play_button"
+                    android:contentDescription="@string/arrow_media_play"
+                    android:padding="6dp"
+                    android:src="@drawable/arrow_ic_play"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <ImageView
+                    android:id="@+id/arrow_media_next"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_bg_cc_media_side_button"
+                    android:contentDescription="@string/arrow_media_next"
+                    android:padding="6dp"
+                    android:src="@drawable/arrow_ic_skip_next"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <ImageView
+                    android:id="@+id/arrow_media_shuffle"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_bg_cc_media_side_button"
+                    android:contentDescription="@string/arrow_media_shuffle"
+                    android:padding="7dp"
+                    android:src="@drawable/arrow_ic_shuffle"
+                    android:tint="@color/arrow_cc_icon"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/arrow_badge"
+        android:layout_width="@dimen/arrow_cc_badge"
+        android:layout_height="@dimen/arrow_cc_badge"
+        android:layout_gravity="top|start"
+        android:background="@drawable/arrow_bg_cc_badge"
+        android:contentDescription="@string/arrow_remove"
+        android:padding="4dp"
+        android:src="@drawable/arrow_ic_remove"
+        android:tint="@color/arrow_cc_badge_on_badge"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/arrow_media_resize_handle"
+        android:layout_width="@dimen/arrow_cc_badge"
+        android:layout_height="@dimen/arrow_cc_badge"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/arrow_bg_cc_media_resize_handle"
+        android:contentDescription="@string/arrow_media_resize"
+        android:padding="4dp"
+        android:src="@drawable/arrow_ic_resize_corner"
+        android:tint="@color/arrow_cc_badge_on_badge"
+        android:visibility="gone" />
+</FrameLayout>

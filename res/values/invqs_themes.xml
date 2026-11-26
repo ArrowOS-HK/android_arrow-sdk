@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="arrow_Theme.App" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/arrow_cc_accent</item>
+        <item name="android:colorAccent">@color/arrow_cc_accent</item>
+        <item name="android:statusBarColor">@color/arrow_cc_page_bg</item>
+        <item name="android:navigationBarColor">@color/arrow_cc_page_bg</item>
+        <item name="android:windowBackground">@color/arrow_cc_page_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/arrow_cc_text_primary</item>
+        <item name="android:textColorSecondary">@color/arrow_cc_text_secondary</item>
+        <item name="android:fontFamily">google-sans</item>
+    </style>
+
+    <style name="arrow_Theme.ControlCenter" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/arrow_cc_accent</item>
+        <item name="android:colorAccent">@color/arrow_cc_accent</item>
+        <item name="android:windowBackground">@color/arrow_cc_page_bg</item>
+        <item name="android:statusBarColor">@color/arrow_cc_page_bg</item>
+        <item name="android:navigationBarColor">@color/arrow_cc_page_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowAnimationStyle">@style/arrow_Animation.ControlCenter</item>
+        <item name="android:fontFamily">google-sans</item>
+    </style>
+
+    <style name="arrow_Animation.ControlCenter" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/arrow_cc_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/arrow_cc_exit_hold</item>
+        <item name="android:activityCloseEnterAnimation">@anim/arrow_cc_exit_hold</item>
+        <item name="android:activityCloseExitAnimation">@anim/arrow_cc_exit</item>
+    </style>
+</resources>

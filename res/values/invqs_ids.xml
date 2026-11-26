@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item name="arrow_header_normal" type="id" />
+    <item name="arrow_txt_date" type="id" />
+    <item name="arrow_btn_edit" type="id" />
+    <item name="arrow_btn_settings" type="id" />
+    <item name="arrow_btn_more" type="id" />
+    <item name="arrow_header_edit" type="id" />
+    <item name="arrow_btn_panel_settings" type="id" />
+    <item name="arrow_btn_done" type="id" />
+    <item name="arrow_txt_edit_hint" type="id" />
+    <item name="arrow_label_controls" type="id" />
+    <item name="arrow_controls_box" type="id" />
+    <item name="arrow_controls_host" type="id" />
+    <item name="arrow_label_tiles" type="id" />
+    <item name="arrow_tiles_box" type="id" />
+    <item name="arrow_tiles_host" type="id" />
+</resources>

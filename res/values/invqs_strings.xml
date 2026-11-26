@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="arrow_edit">Edit</string>
+    <string name="arrow_done">Done</string>
+    <string name="arrow_settings">Settings</string>
+    <string name="arrow_more">More</string>
+    <string name="arrow_panel_settings">Panel settings</string>
+    <string name="arrow_touch_hold_reorder">Edit: tahan item buat geser</string>
+
+    <string name="arrow_controls">Controls</string>
+    <string name="arrow_edit_tiles">Edit tiles</string>
+    <string name="arrow_connectivity">Connectivity</string>
+    <string name="arrow_show_tile_labels">Show tile labels</string>
+    <string name="arrow_control_grid_columns">Control grid columns</string>
+    <string name="arrow_control_grid_rows">Control grid rows</string>
+    <string name="arrow_tile_grid_columns">Tile grid columns</string>
+    <string name="arrow_tile_grid_rows">Tile grid rows</string>
+    <string name="arrow_columns_fmt">%d columns</string>
+    <string name="arrow_rows_fmt">%d rows</string>
+    <string name="arrow_reset_layout">Reset layout</string>
+    <string name="arrow_add">Add</string>
+    <string name="arrow_remove">Remove</string>
+    <string name="arrow_toast_tile_full">Grid tile penuh (%1$d/%2$d). Hapus tile dulu atau naikkan baris/kolom di settings.</string>
+    <string name="arrow_toast_control_full">Grid control penuh. Naikkan row/column control atau hapus control dulu.</string>
+    <string name="arrow_toast_already_added">Item sudah ada di panel</string>
+
+    <string name="arrow_ctrl_internet">Internet</string>
+    <string name="arrow_bluetooth">Bluetooth</string>
+    <string name="arrow_media_player">Media player</string>
+    <string name="arrow_media_now_playing">Not Playing</string>
+    <string name="arrow_media_artist_placeholder">Unknown Artist</string>
+    <string name="arrow_media_prev">Previous</string>
+    <string name="arrow_media_play">Play</string>
+    <string name="arrow_media_pause">Pause</string>
+    <string name="arrow_media_next">Next</string>
+    <string name="arrow_media_shuffle">Shuffle</string>
+    <string name="arrow_media_output">Audio output</string>
+    <string name="arrow_media_output_speaker">Speaker</string>
+    <string name="arrow_media_output_headphones">Headset</string>
+    <string name="arrow_media_output_bluetooth">Bluetooth</string>
+    <string name="arrow_media_output_remote">Cast</string>
+    <string name="arrow_media_resize">Resize media card</string>
+    <string name="arrow_media_resize_edit_hint">.</string>
+
+    <string name="arrow_brightness_v">Vertical brightness</string>
+    <string name="arrow_volume_v">Vertical volume</string>
+    <string name="arrow_brightness_h">Horizontal brightness</string>
+    <string name="arrow_volume_h">Horizontal volume</string>
+
+    <string name="arrow_auto_brightness">Auto brightness</string>
+    <string name="arrow_mute_volume">Mute volume</string>
+    <string name="arrow_ringer_mode">Ringer mode</string>
+
+    <string name="arrow_wifi">Wi‑Fi</string>
+    <string name="arrow_airplane">Airplane</string>
+    <string name="arrow_flashlight">Flashlight</string>
+    <string name="arrow_rotation_short">Rotation</string>
+    <string name="arrow_dnd">Focus</string>
+    <string name="arrow_hotspot">Hotspot</string>
+    <string name="arrow_dark_mode">Dark Mode</string>
+    <string name="arrow_cast">Cast</string>
+    <string name="arrow_nfc">NFC</string>
+    <string name="arrow_alarm">Alarm</string>
+    <string name="arrow_home_controls">Home</string>
+    <string name="arrow_vibrate">Vibrate</string>
+    <string name="arrow_battery_saver">Battery</string>
+    <string name="arrow_screenshot">Screenshot</string>
+    <string name="arrow_data_saver">Data Saver</string>
+    <string name="arrow_networks_available">Networks available</string>
+
+    <string name="arrow_need_camera">Izinkan kamera untuk flashlight</string>
+    <string name="arrow_layout_reset">Layout di-reset</string>
+    <string name="arrow_media_session_access">Media session access</string>
+    <string name="arrow_media_access_required">Media access required</string>
+    <string name="arrow_media_tap_to_enable">Tap media card to enable sessions</string>
+</resources>

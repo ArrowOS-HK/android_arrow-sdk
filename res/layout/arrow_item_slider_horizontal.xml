@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/arrow_slider_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/arrow_bg_cc_slider_track"
+        android:clipChildren="true"
+        android:clipToOutline="true"
+        android:clipToPadding="true">
+
+        <View
+            android:id="@+id/arrow_slider_fill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/arrow_cc_slider_fill" />
+
+        <ImageView
+            android:id="@+id/arrow_slider_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="14dp"
+            android:tint="@color/arrow_cc_icon" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/arrow_badge"
+        android:layout_width="@dimen/arrow_cc_badge"
+        android:layout_height="@dimen/arrow_cc_badge"
+        android:layout_gravity="top|start"
+        android:background="@drawable/arrow_bg_cc_badge"
+        android:contentDescription="@string/arrow_remove"
+        android:padding="4dp"
+        android:src="@drawable/arrow_ic_remove"
+        android:tint="@color/arrow_cc_badge_on_badge"
+        android:visibility="gone" />
+</FrameLayout>

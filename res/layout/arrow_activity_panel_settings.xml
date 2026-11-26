@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arrow_bg_cc_page"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingLeft="16dp"
+    android:paddingTop="12dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="40dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+<LinearLayout
+            android:id="@+id/arrow_preview_tile_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="12dp" />
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_bg_cc_card"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/arrow_ic_settings"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/arrow_settings"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="google-sans-medium" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/arrow_btn_back"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/arrow_bg_cc_header_btn"
+                    android:contentDescription="@string/arrow_done"
+                    android:padding="8dp"
+                    android:src="@drawable/arrow_ic_remove"
+                    android:tint="@color/arrow_cc_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/arrow_show_tile_labels"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="15sp" />
+
+                <Switch
+                    android:id="@+id/arrow_switch_labels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="58dp"
+                    android:showText="false" />
+            </LinearLayout>
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/arrow_control_grid_columns"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/arrow_txt_ctrl_cols"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/arrow_cc_accent"
+                    android:textSize="14sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/arrow_seek_ctrl_cols"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:max="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="2" />
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/arrow_control_grid_rows"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/arrow_txt_ctrl_rows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/arrow_cc_accent"
+                    android:textSize="14sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/arrow_seek_ctrl_rows"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:max="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/arrow_media_resize_edit_hint"
+                android:textColor="@color/arrow_cc_text_secondary"
+                android:textSize="13sp" />
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/arrow_tile_grid_columns"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/arrow_txt_tile_cols"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/arrow_cc_accent"
+                    android:textSize="14sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/arrow_seek_tile_cols"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:max="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="2" />
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/arrow_tile_grid_rows"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/arrow_txt_tile_rows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/arrow_cc_accent"
+                    android:textSize="14sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/arrow_seek_tile_rows"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="6dp"
+                android:max="3"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="2" />
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/arrow_ic_settings"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/arrow_controls"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+<GridLayout
+                android:id="@+id/arrow_catalog_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:alignmentMode="alignBounds"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:columnCount="4"
+                android:useDefaultMargins="false" />
+        </LinearLayout>
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arrow_bg_cc_card"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/arrow_ic_wifi"
+                    android:tint="@color/arrow_cc_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/arrow_connectivity"
+                    android:textColor="@color/arrow_cc_text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="google-sans-medium" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/arrow_catalog_tiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:alignmentMode="alignBounds"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:columnCount="4"
+                android:useDefaultMargins="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/arrow_btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/arrow_bg_btn_secondary_pill"
+            android:gravity="center"
+            android:text="@string/arrow_reset_layout"
+            android:textColor="@color/arrow_cc_text_primary"
+            android:textSize="15sp"
+            android:fontFamily="google-sans-medium" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,2 @@
+package com.arrow.systemui.cc.controller; import android.content.Context; import android.media.AudioManager;
+public class VolumeController { private final AudioManager audio; public VolumeController(Context c){audio=(AudioManager)c.getSystemService(Context.AUDIO_SERVICE);} public int getMax(){return audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC);} public int getVolume(){return audio.getStreamVolume(AudioManager.STREAM_MUSIC);} public void setVolume(int v){audio.setStreamVolume(AudioManager.STREAM_MUSIC,Math.max(0,Math.min(v,getMax())),0);} }
